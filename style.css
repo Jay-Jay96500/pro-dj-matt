@@ -188,7 +188,7 @@ nav .container {
 .hamburger-menu {
     width: 2.7rem;
     height: 3rem;
-    background-color: black;
+    background-color: transparent;
     z-index: 100;
     position: relative;
     display: none;
@@ -585,15 +585,15 @@ nav.open .links {
 /*gallery displays ends*/
 
 /*videos displays*/
-#videos{
+#videos, #pvideos{
     width: 100%;
     margin: 1.5rem 0;
     display: none;
     flex-wrap: wrap;
-    justify-content: center; 
+    justify-content: center;
 }
 
-.video-item {
+.video-item{
     width: 33.33%;
     padding: 1rem 1.2rem;
     display: flex;
@@ -601,14 +601,18 @@ nav.open .links {
     justify-content: center;
 }
 
-.video-image {
+.video-image video {
     position: relative;
     overflow: hidden;
-    justify-content: center;
     border-radius: 16px;
     height: 330px;
-    width: 100%;
+    width: 90%;
+    justify-content: space-around;
 }
+
+
+
+
 /*videos displays ends*/
 
 /*Portoilo start end*/
@@ -831,21 +835,22 @@ nav.open .links {
 }
 
 .prev, .next {
-    padding: 2rem;
-    font-size: 2rem;
-    font-weight: 500;
+    padding: .4rem;
+    font-size: 1rem;
+    font-weight: 600;
     color: var(--main-color);
     transition: .2s;
 }
 
 .control {
-    transition: .3s;
+    transition: .2s;
 }
 
 .control:hover {
     background-color: var(--main-color);
     color: var(--light-one);
-    border-radius: 30px; 
+    border-radius: 25px; 
+    cursor: pointer;
 }
 
 /* testimoinals end*/
@@ -1114,6 +1119,9 @@ nav.open .links {
         padding: 0.7rem 1.7rem;
         margin-left: 0.6rem;
     }
+    header{
+        height: auto;
+    }
     .header-tittle {
         font-size: 2.6rem;
     }
@@ -1252,6 +1260,7 @@ nav.open .links {
 }
 
 @media (max-width: 850px) {
+    
     .hamburger-menu{
         display: flex;
     }
@@ -1266,6 +1275,9 @@ nav.open .links {
         margin-left: 0;
         margin-top: 1rem;
     }
+    header{
+        height: 55vh;
+    }
     .header-content {
         margin-top: 0rem;
         max-width: 550px;
@@ -1279,7 +1291,7 @@ nav.open .links {
         margin: 0 auto;
     }
     .overlay {
-        height: 80%;
+        height: 70%;
     }
     .links {
         position: fixed;
@@ -1306,7 +1318,10 @@ nav.open .links {
         margin: 0.5rem 0;
     }
     .header-content .container.grid-2{
-        min-height: 80vh;
+        min-height: 70vh;
+    }
+    #pvideos{
+        display: block;
     }
     .grid-item, .dj, .video-item{
         width: 50%;
@@ -1316,7 +1331,7 @@ nav.open .links {
         max-width: 270px;
     }
     .background-bg {
-        height: 340px;
+        height: 375px;
     }
     .skill-bar {
         width: 100%;
@@ -1384,15 +1399,17 @@ nav.open .links {
         width: 100%;
     }
     .column-1 {
-        margin-top: -220px;
+        margin-top: -290px;
     }
     #pabout, #ptestimonial{
         margin-top: 50px;
     }
     header{
-        height: 47vh;
+        height: 40.5vh;
     }
-
+    .overlay {
+        height: 100%;
+    }
 }
 
 @media (max-width: 500px) {
@@ -1401,6 +1418,9 @@ nav.open .links {
     }
     .tittle {
         font-size: 1.8rem;
+    }
+    header{
+        height: 41.5vh;
     }
     .text, .ptext {
         font-size: 0.9rem;
@@ -1415,6 +1435,7 @@ nav.open .links {
         font-size: 0.9rem;
     }
 }
+
 
 /*Reponsive End*/
 
